@@ -41,7 +41,7 @@ function calculateTotal() {
     const totalPrice = phoneCount * 1219 + caseCount * 59;
     document.getElementById('total-price').innerText = '$ ' + totalPrice;
 
-    const tax = (totalPrice * .1).toFixed(0);
+    const tax = parseFloat((totalPrice * .1).toFixed(0));
     document.getElementById('tax').innerText = '$ ' + tax;
 
     const grandTotal = totalPrice + tax;
